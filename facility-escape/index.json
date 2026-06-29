@@ -1,0 +1,25 @@
+{
+  "title": "Haunted Kubernetes Escape Room",
+
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+
+    "steps": [
+      {
+        "title": "Reception Desk",
+        "text": "step1/text.md",
+        "verify": "step1/verify.sh"
+      }
+    ],
+
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+
+  "backend": {
+    "imageid": "kubernetes-kubeadm-2nodes"
+  }
+}
