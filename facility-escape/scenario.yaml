@@ -1,26 +1,14 @@
-title: Kubernetes Facility Escape
-
-description: |
-  Escape the haunted Kubernetes facility by troubleshooting
-  broken Kubernetes resources.
-
-backend:
-  imageid: kubernetes-kubeadm-1node-4GB
-
-details:
-  intro:
-    text: intro.md
-
-  finish:
-    text: finish.md
-
-tabs:
-  - title: Terminal
-    type: terminal
-
-  - title: Instructions
-    type: markdown
-    contents: intro.md
-
-checks:
-  - script: verify.sh
+{
+  "title": "Kubernetes Facility Escape",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node-4GB"
+  }
+}
