@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend
+  namespace: escape-room
+spec:
+  selector:
+    app: frontend-v1
+  ports:
+  - port: 80
+    targetPort: 80
