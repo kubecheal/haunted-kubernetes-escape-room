@@ -1,5 +1,6 @@
 {
   "title": "Haunted Kubernetes Escape Room",
+  "description": "Escape the haunted Kubernetes facility by troubleshooting broken Kubernetes resources.",
 
   "details": {
     "intro": {
@@ -10,8 +11,7 @@
     "steps": [
       {
         "title": "Reception Desk",
-        "text": "step1/text.md",
-        "verify": "step1/verify.sh"
+        "text": "step1/text.md"
       }
     ],
 
