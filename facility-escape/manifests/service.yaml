@@ -1,14 +1,12 @@
 apiVersion: v1
 kind: Service
-
 metadata:
   name: frontend
   namespace: haunted-facility
-
 spec:
   selector:
     app: frontend-v1
-
   ports:
-  - port: 80
-    targetPort: 80
+    - protocol: TCP
+      port: 80
+      targetPort: 80
