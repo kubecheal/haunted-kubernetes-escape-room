@@ -3,7 +3,8 @@
 
   "details": {
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
+      "foreground": "setup.sh"
     },
 
     "steps": [
@@ -21,9 +22,5 @@
 
   "backend": {
     "imageid": "kubernetes-kubeadm-2nodes"
-  },
-
-  "environment": {
-    "foreground": "setup.sh"
   }
 }
