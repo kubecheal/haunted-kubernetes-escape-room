@@ -1,14 +1,22 @@
 #!/bin/bash
 
-SELECTOR=$(kubectl get svc frontend \
--n haunted-facility \
--o jsonpath='{.spec.selector.app}')
+SERVICE_SELECTOR=$(kubectl get svc frontend \
+  -n haunted-facility \
+  -o jsonpath='{.spec.selector.app}')
 
-if [ "$SELECTOR" = "frontend" ]
-then
-    exit 0
+if [ "$SERVICE_SELECTOR" != "frontend" ]; then
+    echo "❌ The Service selector is still incorrect."
+    exit 1
 fi
 
-echo "Reception Desk is still broken."
+ENDPOINTS=$(kubectl get endpoints frontend \
+  -n haunted-facility \
+  -o jsonpath='{.subsets[*].addresses[*].ip}')
 
-exit 1
+if [ -z "$ENDPOINTS" ]; then
+    echo "❌ The Service still has no endpoints."
+    exit 1
+fi
+
+echo "✅ Reception Desk restored!"
+exit 0
